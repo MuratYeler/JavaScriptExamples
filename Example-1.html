@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Topla(){
+            var sayi1 = Number(document.getElementById("sayi1").value);
+            var sayi2 = Number(document.getElementById("sayi2").value);
+
+            //alert(sayi1)
+            //alert(sayi2)
+
+            //console.log("Sayı 1: " + sayi1)
+            //console.log("Sayı 2: " + sayi2)
+
+            document.getElementById("sonuc").innerHTML = "Toplama Sonucu: " + (sayi1 + sayi2)
+        }
+
+        function Cikar(){
+            var sayi1 = Number(document.getElementById("sayi1").value);
+            var sayi2 = Number(document.getElementById("sayi2").value);
+
+            document.getElementById("sonuc").innerHTML = "Çıkarma Sonucu: " + (sayi1 - sayi2)
+        }
+
+        function Carp(){
+            var sayi1 = Number(document.getElementById("sayi1").value);
+            var sayi2 = Number(document.getElementById("sayi2").value);
+
+            document.getElementById("sonuc").innerHTML = "Çarpma Sonucu: " + (sayi1 * sayi2)
+        }
+
+        function Bol(){
+            var sayi1 = Number(document.getElementById("sayi1").value);
+            var sayi2 = Number(document.getElementById("sayi2").value);
+
+            if (sayi2 == 0) {
+                alert("Sayı 2 0 olamaz!")
+            }
+            else{
+                document.getElementById("sonuc").innerHTML = "Bölme Sonucu: " + (sayi1 / sayi2)
+            }
+
+           
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Hesap Makinesi</h1>
+
+    <label for="">1. Sayı: </label>
+    <input type="text" id="sayi1">
+    <br>
+    <br>
+    <label for="">2. Sayı: </label>
+    <input type="text" id="sayi2">
+     <br><br>
+    <input type="button" onclick="Topla()" value="Topla" id="btnTopla">
+    <input type="button" onclick="Cikar()" value="Çıkar" id="btnCikar">
+    <input type="button" onclick="Carp()" value="Çarp" id="btnCarp">
+    <input type="button" onclick="Bol()" value="Böl" id="btnBol">
+
+    <br><br>
+
+    <div id="sonuc"></div>
+</body>
+</html>
