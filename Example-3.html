@@ -1,0 +1,35 @@
+
+<!-- alan cevre -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">1. Kenarı Giriniz: </label>
+    <input type="number" id="kenar1">
+    <br><br>
+    <label for="">2. Kenarı Giriniz: </label>
+    <input type="number" id="kenar2">
+
+    <button id="hesapla">Hesapla</button>
+
+    <br><br>
+    <label for="">Alan: </label>
+    <label for="" id="alan"></label>
+
+    <script>
+        var hesaplaBtn = document.getElementById("hesapla");
+        hesaplaBtn.onclick = function(){
+            var kenar1 = document.getElementById("kenar1").value;
+            var kenar2 = document.getElementById("kenar2").value;
+
+            var alan = kenar1 * kenar2;
+            document.getElementById("alan").innerHTML = alan;
+
+        }
+    </script>
+</body>
+</html>
